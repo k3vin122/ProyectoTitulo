@@ -1,0 +1,33 @@
+<?php
+
+namespace Database\Factories;
+
+use App\Models\Empresa;
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class EmpresaFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Empresa::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'rol' => $this->faker->text(255),
+            'nombre' => $this->faker->text(255),
+            'direccion' => $this->faker->text(255),
+            'telefono' => $this->faker->text(255),
+            'correo' => $this->faker->text(255),
+        ];
+    }
+}
